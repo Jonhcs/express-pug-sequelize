@@ -11,4 +11,6 @@ sequelize
     .then(() => console.log('OK!'))
     .catch(err => {console.error(err); process.exit(1);})
 
+sequelize.sync()
+
 module.exports = sequelize
