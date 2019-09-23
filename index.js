@@ -11,7 +11,6 @@ const app = express()
 const sequelize = new Sequelize('sequelize', 'root', 'info@1234', {
     host: 'localhost',
     dialect: 'mysql',
-    operatorsAliases: Sequelize.Op
 })
 sequelize
     .authenticate()
@@ -28,6 +27,6 @@ app.set('views', path.join(__dirname, 'src/view'))
 
 require('./src/index')(app)
 
-app.listen(3000, () => {
+app.listen(9000, () => {
     console.log('Express started')
 })
