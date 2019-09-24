@@ -19,3 +19,6 @@ block content
                     td= event.description
                     td
                         a(href="/events/" + event.id class="btn btn-info") More
+                        a(href="/events/edit/" + event.id class="btn btn-info") Edit
+                        form(style="display: inline-block" action="/events/" + event.id + "/?_method=DELETE", method="POST" )
+                            button(type="submit" class="btn btn-danger") Delete
