@@ -1,6 +1,25 @@
 html 
     head
      title #{title}
+     link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
 
     body
-        block content
+        nav(class="navbar navbar-toggleable-md navbar-light bg-faded")
+            button(class="navbar-toggler navbar-toggler-right", type="button", data-toggle="collapse", data-target="#navbar")
+                span(class="navbar-toggler-icon")
+            a.navbar-brand Events
+
+            div(class="collapse navbar-collapse", id="navbar")
+                ul(class="navbar-nav mt-auto")
+                    li(class="nav-item")
+                        a(class="nav-link" href="/events") List
+                        a(class="nav-link" href="/events/new") Create
+
+        main.container
+            div.row 
+            div.col-xs-12.col-sm-12.col-md-12
+            block content
+
+        script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")

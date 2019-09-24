@@ -3,6 +3,7 @@ const Event = sequelize.import('./../../model/event')
 
 module.exports = (req, res ) => {
     return res.render('home/index', {
-        title: "Jhonatan Carvalho"
+        title: "Jhonatan Carvalho",
+        msg:"Welcome from website"
     })
 }

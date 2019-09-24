@@ -5,4 +5,5 @@ module.exports = (sequelize, DataTypes) => {
         name: DataTypes.STRING,
         description: DataTypes.TEXT
     })
+    timestamps: false
 }
